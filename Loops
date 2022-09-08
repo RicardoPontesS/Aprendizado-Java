@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Loops {
+	
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		
+	System.out.print("Digite ate onde deseja contar: ");
+	int cont = input.nextInt();
+	
+	// Funcionamento básico do loop For
+	System.out.println("---------- Dentro do loop for -----------");
+	for(int i=0 ;i <= cont;i++) {
+		System.out.printf("%d\n",i);
+	}
+	
+	//Funcionamento básico do Loop While
+	
+	int i = 0;
+	System.out.println("---------- Dentro do loop while -----------");
+	while(i <= cont) {
+		System.out.printf("%d\n",i);
+		i++;
+	}
+	
+	i = 0;
+	System.out.println("---------- Dentro do loop do while -----------");
+	do {
+		System.out.printf("%d\n",i);
+		i++;
+	}while(i<=cont);
+		
+	}
+
+}
