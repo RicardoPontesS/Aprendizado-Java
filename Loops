@@ -8,13 +8,13 @@ public class Loops {
 	System.out.print("Digite ate onde deseja contar: ");
 	int cont = input.nextInt();
 	
-	// Funcionamento básico do loop For
+	// Funcionamento básico do loop for
 	System.out.println("---------- Dentro do loop for -----------");
 	for(int i=0 ;i <= cont;i++) {
 		System.out.printf("%d\n",i);
 	}
 	
-	//Funcionamento básico do Loop While
+	//Funcionamento básico do Loop while
 	
 	int i = 0;
 	System.out.println("---------- Dentro do loop while -----------");
@@ -23,6 +23,7 @@ public class Loops {
 		i++;
 	}
 	
+	//Funcionamento básico do Loop do while
 	i = 0;
 	System.out.println("---------- Dentro do loop do while -----------");
 	do {
