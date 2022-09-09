@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class Arrays {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		Random generator = new Random();
+
+		double[] tempDay = new double[30];
+
+		for (int i = 0; i < tempDay.length; i++) {
+			tempDay[i] = generator.nextDouble(50);
+		}
+
+		for (int i = 0; i < tempDay.length; i++) {
+			System.out.printf("Dia %d: [%.2f°] \n",i,tempDay[i]);
+		}
+
+	}
+}
