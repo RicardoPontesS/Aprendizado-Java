@@ -1,0 +1,24 @@
+import java.util.Random;
+
+public class Matrices {
+
+	public static void main(String[] args) {
+
+		int[][] mat = new int[3][3];
+		Random rand = new Random();
+
+		for (int i = 0; i < mat.length; i++) {
+			for (int j = 0; j < mat.length; j++) {
+				mat[i][j] = rand.nextInt(100);
+			}
+		}
+
+		for (int i = 0; i < mat.length; i++) {
+			for (int j = 0; j < mat.length; j++) {
+				System.out.printf("[%d]", mat[i][j]);
+			}
+			System.out.println("");
+		}
+	}
+
+}
