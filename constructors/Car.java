@@ -1,5 +1,3 @@
-package videoaulas;
-
 public class Car {
 	
 	String brand;
