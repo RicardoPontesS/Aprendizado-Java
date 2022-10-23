@@ -11,6 +11,12 @@ public class Professor extends DadosBasicos{
 		return 0;
 	}
 	
+	public String obterEndereco() {
+		String end = "Endereço do professor: " + super.getEndereco();
+		return end;
+	}
+	
+	
 //----------------------------------------------------	
 	public String getDepartamento() {
 		return departamento;
