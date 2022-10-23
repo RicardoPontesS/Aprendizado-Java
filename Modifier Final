@@ -1,0 +1,7 @@
+package videoaulas;
+
+public final class Constantes {
+	
+	public static final String URL_GIT = "https://github.com/RicardoPontesS";
+	
+}
