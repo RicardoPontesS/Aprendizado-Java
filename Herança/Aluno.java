@@ -11,11 +11,20 @@ public class Aluno extends DadosBasicos {
 	}
 
 	public boolean verificaAprovado() {
-		
+
 		return true;
 	}
 
-// ------------------------------------
+	// ------------------------------------
+	public Aluno() {
+		
+	}
+	
+	public Aluno(String nome, String endereco, String telefone, String cpf,String curso) {
+		super(nome, endereco, telefone, cpf);
+		this.cursos = curso;
+	}
+	
 	public String getCursos() {
 		return cursos;
 	}
