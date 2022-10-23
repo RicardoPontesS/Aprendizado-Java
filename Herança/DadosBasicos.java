@@ -6,7 +6,20 @@ public class DadosBasicos {
 	private String telefone;
 	private String cpf;
 	
-//----------------------------------------------------	
+
+	//----------------------------------------------------	
+	
+	public DadosBasicos() {
+		
+	}
+	
+	public DadosBasicos(String nome, String endereco, String telefone, String cpf) {
+		this.nome = nome;
+		this.endereco = endereco;
+		this.telefone = telefone;
+		this.cpf = cpf;
+	}
+	
 	public String getNome() {
 		return nome;
 	}
