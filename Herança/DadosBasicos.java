@@ -6,7 +6,10 @@ public class DadosBasicos {
 	private String telefone;
 	private String cpf;
 	
-
+	public String obterEndereco() {
+		return endereco;
+	}
+	
 	//----------------------------------------------------	
 	
 	public DadosBasicos() {
