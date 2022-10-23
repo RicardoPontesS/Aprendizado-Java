@@ -15,16 +15,22 @@ public class Aluno extends DadosBasicos {
 		return true;
 	}
 
+	public String obterEndereco() {
+		String end = "Endereço do aluno: " + super.getEndereco();
+		return end;
+
+	}
+
 	// ------------------------------------
 	public Aluno() {
-		
+
 	}
-	
-	public Aluno(String nome, String endereco, String telefone, String cpf,String curso) {
+
+	public Aluno(String nome, String endereco, String telefone, String cpf, String curso) {
 		super(nome, endereco, telefone, cpf);
 		this.cursos = curso;
 	}
-	
+
 	public String getCursos() {
 		return cursos;
 	}
