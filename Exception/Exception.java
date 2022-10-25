@@ -6,16 +6,37 @@ public class Exception {
 
 	public static void main(String[] args) {
 
-		int[] vector = new int[4];
 		Scanner input = new Scanner(System.in);
 
+//Exception simples
+		int[] vetor = new int[4];
 		try {
-			System.out.println("Antes da exceÁ„o: ");
-			vector[4] = 1;
+
+			System.out.println("Antes da exce√ß√£o: ");
+			vetor[4] = 1;
+
 		} catch (ArrayIndexOutOfBoundsException exception) {
 			System.out.println("Erro ao acessar index do vetor. ");
 		}
-		System.out.println("Fora da exceÁ„o. ");
-	}
 
+		System.out.println("Fora da exce√ß√£o. ");
+
+//Multiplas exce√ß√µes 
+		int[] numeros = { 12, 4, 2, 7, 8, 0 };
+		int[] denominadores = { 1, 2, 0, 4, 2 };
+
+		for (int i = 0; i < numeros.length; i++) {
+			try {
+				System.out.printf("%d / %d = %d\n", numeros[i], denominadores[i], numeros[i] / denominadores[i]);
+
+			} catch (ArithmeticException exception) {
+				System.out.println("\nErro de aritm√©tica. ");
+			} catch (ArrayIndexOutOfBoundsException exception) {
+				System.out.println("Erro ao acessar index do vetor. ");
+			} catch (Throwable execpetion) {
+				System.out.println("O correu um erro. ");
+			}
+
+		}
+	}
 }
