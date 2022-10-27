@@ -25,7 +25,7 @@ public class Exception {
 		int[] numeros = { 12, 4, 2, 7, 8, 0 };
 		int[] denominadores = { 1, 2, 0, 4, 2 };
 
-		for (int i = 0; i < numeros.length; i++) {
+				for (int i = 0; i < numeros.length; i++) {
 			try {
 				System.out.printf("%d / %d = %d\n", numeros[i], denominadores[i], numeros[i] / denominadores[i]);
 
@@ -35,8 +35,9 @@ public class Exception {
 				System.out.println("Erro ao acessar index do vetor. ");
 			} catch (Throwable execpetion) {
 				System.out.println("O correu um erro. ");
+			} finally {
+				System.out.println("Essa linha é impressa sempre após o try/catch");
 			}
-
 		}
 	}
 }
