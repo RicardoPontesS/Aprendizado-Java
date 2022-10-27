@@ -36,7 +36,7 @@ public class Exception {
 			} catch (Throwable execpetion) {
 				System.out.println("O correu um erro. ");
 			} finally {
-				System.out.println("Essa linha é impressa sempre após o try/catch");
+				System.out.println("Essa linha é impressa 'sempre' após o try/catch");
 			}
 		}
 	}
