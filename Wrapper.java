@@ -4,7 +4,7 @@ public class TesteWrapper {
 
 	public static void main(String[] args) {
 		
-		/* Exemplos de tipos primitivos b·sicos
+		/* Exemplos de tipos primitivos b√°sicos
 		short num1 = 1;
 		byte num2 = 10;
 		int num3 = 100;
