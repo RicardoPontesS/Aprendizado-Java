@@ -24,6 +24,9 @@ public class TesteWrapper {
 		Boolean num6 = new Boolean(true);
 		Character num7 = new Character('c');
 		
+		
+		//conversão de valores na própria classe Wrapper
+		System.out.println(num4.longValue());
 	}
 
 }
