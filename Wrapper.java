@@ -26,6 +26,23 @@ public class TesteWrapper {
 		
 		//conversão de valores na própria classe Wrapper
 		System.out.println(num4.longValue());
+		
+		
+		/*autoboxing
+		Short num = 1;
+		Byte num1 = 10;
+		Integer num2 = 100;
+		Long num3 = 10000;
+		Float num4 = 3.5f;
+		Double num5 = 3.5;
+		Boolean num6 = true;
+		Character num7 = c;
+		 */
+		
+		/*
+		autounboxing
+		int num = num1;   -> num1.intValue();
+		*/
 	}
 
 }
