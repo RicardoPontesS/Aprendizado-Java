@@ -1,0 +1,22 @@
+package videoaulas;
+
+import static java.lang.Math.sqrt;
+import static java.lang.Math.pow;
+
+public class Staticimport {
+
+	public static void main(String[] args) {
+
+		Double a = Double.valueOf(12);
+		Double b = Double.valueOf(3);
+		Double c = Double.valueOf(4);
+
+		System.out.println(Math.pow(a, b));
+		System.out.println(Math.sqrt(c));
+		
+		
+		System.out.println(pow(a,b));
+		System.out.println(sqrt(c));
+	}
+
+}
