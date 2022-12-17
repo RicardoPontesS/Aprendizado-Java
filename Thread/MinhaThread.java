@@ -16,7 +16,7 @@ public class MinhaThread extends Thread {
 			}
 
 		}
-		System.out.println("Theread terminada");
+		System.out.println("Thread terminada");
 	}
 
 	public MinhaThread(String nome, int tempo) {
