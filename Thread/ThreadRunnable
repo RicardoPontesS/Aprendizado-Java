@@ -1,0 +1,29 @@
+package videoaulas;
+
+public class MinhaThreadRunnable implements Runnable{
+
+	private String nome;
+	private int tempo;
+	
+	@Override
+	public void run() {
+	
+		for(int i = 0 ;i<=10;i++) {
+			System.out.println(nome+"contador"+i);
+			try {
+				Thread.sleep(tempo);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		System.out.println(nome+" terminada");
+	}
+
+	public MinhaThreadRunnable(String nome, int tempo) {
+		super();
+		this.nome = nome;
+		this.tempo = tempo;
+		Thread thread = new Thread(this);
+		thread.start();
+	}
+}
