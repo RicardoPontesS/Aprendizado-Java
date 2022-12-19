@@ -22,13 +22,13 @@ public class TesteStrings {
 		String abcde = new String(ascii);
 		System.out.println(abcde);
 
-		// ConcatenaÁ„o
+		// Concatena√ß√£o
 		String firstName = new String("Ricardo Willian ");
 		String lastName = new String("Pontes da Silva");
 		String fullName = new String(firstName + lastName);
 		System.out.println(fullName);
 
-		// Convers„o em String
+		// Convers√£o em String
 		String converte = new String(String.valueOf(1));
 		System.out.println(converte);
 
@@ -41,14 +41,14 @@ public class TesteStrings {
 		java.getChars(0, 3, jav, 0);
 		System.out.println(jav);
 
-		// ComparaÁ„o
-		String ola1 = "Ol·";
-		String ola2 = "OL¡";
-		String ola3 = "Ol·";
+		// Compara√ß√£o
+		String ola1 = "Ol√°";
+		String ola2 = "OL√Å";
+		String ola3 = "Ol√°";
 
-		System.out.println("Ol· È igual a OL¡? " + ola1.equals(ola2));
-		System.out.println("Ol· È igual a Ol·? " + ola1.equals(ola3));
-		System.out.println("Ol· È igual a OL¡? " + ola1.equalsIgnoreCase(ola2));
+		System.out.println("Ol√° √© igual a OL√Å? " + ola1.equals(ola2));
+		System.out.println("Ol√° √© igual a Ol√°? " + ola1.equals(ola3));
+		System.out.println("Ol√° √© igual a OL√Å? " + ola1.equalsIgnoreCase(ola2));
 
 		String banana = "banana";
 		String ban = "ban";
@@ -67,6 +67,30 @@ public class TesteStrings {
 		System.out.println(a.compareTo(b)); // - 1 quando x > y
 		System.out.println(a.compareTo(A)); // 32 quando y > x
 		System.out.println(a.compareToIgnoreCase(A)); // 0 quando x = y
+		
+		//buscas
+		
+		System.out.println(banana.indexOf('n')); //-1 se n√£o existir e se existir, retorna a posi√ß√£o
+		System.out.println(banana.lastIndexOf('a')); // Retorna o √∫ltimo index que a letra aparece
+		System.out.println(banana.contains(ban)); // Retorna true ou false caso uma string contenha outra
+		
+		//-------------
+		
+		String teste = new String ("Isso √© um teste");
+		System.out.println(teste);
+		System.out.println(teste.substring(10)); // retorna a partir do index passado
+		System.out.println(teste.substring(0, 10)); // retorna a partir do intervalo passado
+		
+		String espacos = new String("e s p a c o s");
+		String semEspacos = new String(espacos.replace('c','√ß')); //modifica um caracter por outro
+		semEspacos = semEspacos.replaceAll(" ", ""); // Remove um caracter por outro
+		
+		String sobraEspacos = new String(" Teste Teste "); // Remove espa√ßos antes e depois da string
+		System.out.println(sobraEspacos.trim());
+		System.out.println(semEspacos); 
+		
+		System.out.println(teste.toUpperCase()); // Passa todos os caracteres para caixa alta
+		System.out.println(teste.toLowerCase());// Passa todos os caracteres para caixa baixa
 	}
 
 }
