@@ -1,5 +1,7 @@
 package videoaulas;
 
+import java.util.StringTokenizer;
+
 public class TesteStrings {
 
 	public static void main(String[] args) {
@@ -91,6 +93,24 @@ public class TesteStrings {
 		
 		System.out.println(teste.toUpperCase()); // Passa todos os caracteres para caixa alta
 		System.out.println(teste.toLowerCase());// Passa todos os caracteres para caixa baixa
+		
+		String alfabeto1 = String.join(",", "A","B","C","D","E"); // Junta todos os caracteres com o caractere passado
+		System.out.println(alfabeto1);
+		
+		String[] letras1 = (alfabeto1.split(",")); // Remove um caracter já unido
+		
+		StringBuffer sb = new StringBuffer();  // Concatena Strings de uma maneira mais eficiênte 
+		for(String letra : letras1) {
+			sb.append(letra);
+		}
+		alfabeto1 = sb.toString();
+		
+		String arquivo = new String("1;Ricardo;21"); // Separa uma String tendo como base um token
+		
+		StringTokenizer st = new StringTokenizer(arquivo,";");
+		while(st.hasMoreTokens()) {
+			System.out.println(st.nextToken());
+		}
 	}
 
 }
