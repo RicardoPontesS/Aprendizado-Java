@@ -24,7 +24,7 @@ public class Vetor {
 			throw new IllegalArgumentException("Posição inválida.");
 		}
 		aumentaCapacidade();
-		for (int i = this.tamanho-1; i >= posicao; i--) {
+		for (int i = this.tamanho - 1; i >= posicao; i--) {
 			this.elementos[i + 1] = this.elementos[i];
 		}
 		this.elementos[posicao] = elemento;
@@ -32,6 +32,18 @@ public class Vetor {
 
 		return true;
 
+	}
+
+	public void removeElemento(int posicao) {
+
+		if (!(posicao >= 0 && posicao < tamanho)) {
+			throw new IllegalArgumentException("Posição inválida.");
+		}
+
+		for (int i = posicao; i < this.tamanho - 1; i++) {
+			this.elementos[i] = this.elementos[i+1];
+		}
+		tamanho--;
 	}
 
 	private void aumentaCapacidade() {
