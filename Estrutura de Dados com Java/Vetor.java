@@ -18,14 +18,23 @@ public class Vetor {
 
 	}
 
-	public String busca(int posicao) {
+	public int busca(String elemento) {
 
-		if(!(posicao>=0 && posicao<tamanho)) {
-			throw new IllegalArgumentException("Posição inválida");
-		}else {
-			return this.elementos[posicao];
+		int verificador = 0;
+
+		for (int i = 0; i < this.tamanho; i++) {
+
+			if (this.elementos[i].equalsIgnoreCase(elemento)) {
+				System.out.println(elementos[i]);
+				verificador = i;
+				
+			} else {
+				verificador=-1;
+			
+			}
+
 		}
-
+		return verificador;
 	}
 
 	public String toString() {
