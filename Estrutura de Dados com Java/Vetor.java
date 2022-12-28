@@ -18,6 +18,22 @@ public class Vetor {
 
 	}
 
+	public boolean adiciona(String elemento, int posicao) {
+
+		if (!(posicao >= 0 && posicao <= tamanho)) {
+			throw new IllegalArgumentException("Posição inválida.");
+		} else {
+			for (int i = this.tamanho; i >= posicao;i--) {
+				this.elementos[i+1] =this.elementos[i];
+			}
+			this.elementos[posicao] =elemento;
+			this.tamanho++;
+		}
+
+		return true;
+
+	}
+
 	public int busca(String elemento) {
 
 		int verificador = 0;
@@ -27,10 +43,10 @@ public class Vetor {
 			if (this.elementos[i].equalsIgnoreCase(elemento)) {
 				System.out.println(elementos[i]);
 				verificador = i;
-				
+
 			} else {
-				verificador=-1;
-			
+				verificador = -1;
+
 			}
 
 		}
