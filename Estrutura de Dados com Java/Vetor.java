@@ -41,9 +41,27 @@ public class Vetor {
 		}
 
 		for (int i = posicao; i < this.tamanho - 1; i++) {
-			this.elementos[i] = this.elementos[i+1];
+			this.elementos[i] = this.elementos[i + 1];
 		}
 		tamanho--;
+	}
+
+	public void removeElemento(String elemento) {
+
+		int posicao = busca(elemento);
+		if (posicao < 0) {
+			System.out.println("Elemento não existe no vetor.");
+		} else {
+			if (!(posicao >= 0 && posicao < tamanho)) {
+				throw new IllegalArgumentException("Posição inválida.");
+			}
+
+			for (int i = posicao; i < this.tamanho - 1; i++) {
+				this.elementos[i] = this.elementos[i + 1];
+			}
+			tamanho--;
+		}
+
 	}
 
 	private void aumentaCapacidade() {
@@ -60,21 +78,14 @@ public class Vetor {
 
 	public int busca(String elemento) {
 
-		int verificador = 0;
-
 		for (int i = 0; i < this.tamanho; i++) {
 
 			if (this.elementos[i].equalsIgnoreCase(elemento)) {
-				System.out.println(elementos[i]);
-				verificador = i;
-
-			} else {
-				verificador = -1;
-
+				return i;
 			}
 
 		}
-		return verificador;
+		return -1;
 	}
 
 	public String toString() {
