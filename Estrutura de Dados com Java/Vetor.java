@@ -4,6 +4,27 @@ import java.util.Arrays;
 
 public class Vetor {
 
+	ArrayList<String> arrayList = new ArrayList<String>();
+
+		arrayList.add("Ricardo");
+		arrayList.add("Pontes");
+		System.out.println(arrayList);
+		
+		arrayList.add(1,"Willian");
+		System.out.println(arrayList);
+		
+		System.out.println(arrayList.contains("Pontes"));
+		System.out.println(arrayList.indexOf("Ricardo"));;
+		System.out.println(arrayList.get(0));
+		
+		arrayList.remove(0);
+		arrayList.remove("Willian");
+		System.out.println(arrayList);
+		
+		System.out.println(arrayList.size());
+	
+	
+	
 	private String[] elementos;
 	private int tamanho;
 
